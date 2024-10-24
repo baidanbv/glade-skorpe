@@ -1,0 +1,7 @@
+{
+  "/(site)/cart/page": "app/(site)/cart/page.js",
+  "/(admin)/backoffice/page": "app/(admin)/backoffice/page.js",
+  "/(admin)/backoffice/messages/page": "app/(admin)/backoffice/messages/page.js",
+  "/(admin)/backoffice/dishes/page": "app/(admin)/backoffice/dishes/page.js",
+  "/(admin)/backoffice/orders/page": "app/(admin)/backoffice/orders/page.js"
+}
