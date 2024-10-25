@@ -15,7 +15,7 @@ I design- og udviklingsprocessen fulgte jeg princippet "fra det simple til det k
    Efter afslutningen af de statiske sider gik jeg videre med at udvikle forsiden, hvor alle retter vises, samt produktsiden, som giver brugerne mulighed for at se detaljer om hver ret og tilføje dem til kurven.
 
 3. **Indkøbskurv**:
-   Det næste trin var at implementere funktionaliteten for indkøbskurven, som giver brugerne mulighed for at tilføje, ændre antal og fjerne retter. For at gemme kurvens data blev `localStorage` brugt, hvilket sikrer, at kurvens tilstand bevares mellem sessioner.
+   Det næste trin var at implementere funktionaliteten for indkøbskurven, som giver brugerne mulighed for at tilføje, ændre antal og fjerne retter. På kurvsiden blev der desuden tilføjet funktioner til at ændre mængden af hvert produkt samt fjerne produkter fra kurven. For at gemme kurvens data blev `localStorage` brugt, hvilket sikrer, at kurvens tilstand bevares mellem sessioner.
 
 4. **Administrationspanel**:
    Efter at have afsluttet den brugervendte del af applikationen, gik jeg videre med at udvikle administrationspanelet. I administrationspanelet blev følgende funktioner implementeret:
