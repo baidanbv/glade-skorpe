@@ -25,7 +25,6 @@ const Page = () => {
 
   const handleDeleteById = async (id) => {
     try {
-      console.log(token);
       setLoading(true);
       await messagesAPI.deleteMessageById(id, token);
       closeDeletePopup();
@@ -38,19 +37,27 @@ const Page = () => {
   };
 
   const handleOpenMessage = async (messageId) => {
+    const selectedMessage = messages.find((msg) => msg._id === messageId);
+    if (!selectedMessage) return;
+
+    const newStatus = !selectedMessage.status;
+
     try {
       const updatedData = {
         id: messageId,
-        status: true
+        status: newStatus,
       };
 
       await messagesAPI.updateMessageById(updatedData, token);
 
-      const message = messages.find((msg) => msg._id === messageId);
-      setSelectedMessage(message);
+      setSelectedMessage({
+        ...selectedMessage,
+        status: newStatus,
+      });
+
       loadMessages();
     } catch (error) {
-      console.error('Error opening message:', error);
+      console.error('Error updating message status:', error);
     }
   };
 
@@ -98,6 +105,7 @@ const Page = () => {
               <th className="border px-4 py-2">Name</th>
               <th className="border px-4 py-2">Subject</th>
               <th className="border px-4 py-2">Status</th>
+              <th className="border px-4 py-2">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -108,7 +116,7 @@ const Page = () => {
                 <td className="border px-4 py-2 text-center">{message.status ? 'Read' : 'Unread'}</td>
                 <td className="border px-2 py-2">
                   <div className="flex gap-3 justify-center">
-                    <ActionButton title="Open" handleClick={() => handleOpenMessage(message._id)} action="open" />
+                    <ActionButton title={`${message.status ? 'Unread' : 'Read'}`} handleClick={() => handleOpenMessage(message._id)} action="open" />
                     <ActionButton title="Delete" handleClick={() => openDeletePopup(message._id)} action="delete" />
                   </div>
                 </td>

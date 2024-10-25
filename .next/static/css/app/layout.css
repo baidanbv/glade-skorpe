@@ -1268,12 +1268,12 @@ h6 {
   border-color: var(--accent);
 }
 
-.hover\:bg-transparent:hover{
-  background-color: transparent;
-}
-
 .hover\:bg-background:hover{
   background-color: var(--background);
+}
+
+.hover\:bg-transparent:hover{
+  background-color: transparent;
 }
 
 .hover\:text-accent:hover{
