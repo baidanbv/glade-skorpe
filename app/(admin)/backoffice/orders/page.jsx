@@ -10,6 +10,7 @@ import ModalPopup from '@/components/ui/ModalPopup/ModalPopup';
 import AcceptMessage from '@/components/ui/AcceptMessage/AcceptMessage';
 import Loader from '@/components/layouts/Loader/Loader';
 import ActionButton from '@/components/ui/Buttons/ActionButton';
+import AdminPageTitle from '@/components/ui/Title/AdminPageTitle';
 
 const Page = () => {
   const token = localStorage.getItem('token') || null;
@@ -64,7 +65,7 @@ const Page = () => {
 
   return (
     <div className="relative">
-      <h1 className="capitalize font-kurale text-3xl mb-5 text-border text-secondary">Orders</h1>
+      <AdminPageTitle title="Orders"/>
       {orders.length > 0 ? (
         <table className="table-auto border-collapse border w-full font-kurale">
           <thead>

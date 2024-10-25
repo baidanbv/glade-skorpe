@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import { usersAPI } from '@/api';
 import { usePopup } from '@/store';
 
+import SubmitButton from '@/components/ui/Buttons/SubmitButton';
+
 const CreateUser = ({ onSuccess, token }) => {
   const { closePopup } = usePopup();
   const {
@@ -60,9 +62,7 @@ const CreateUser = ({ onSuccess, token }) => {
         </div>
 
         <div className="flex items-center justify-center">
-          <button className="bg-secondary py-2 px-4 rounded focus:outline-none focus:shadow-outline font-kurale" type="submit">
-            Add user
-          </button>
+           <SubmitButton title=" Add user" type="submit"/>
         </div>
       </form>
     </div>

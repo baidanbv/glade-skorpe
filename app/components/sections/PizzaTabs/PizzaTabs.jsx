@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { usePizzaStore, usePizzaCategory } from '@/store/';
+import { usePizzaStore, useCategories } from '@/store/';
 
 import Wrapper from '@/components/ui/Wrapper/Wrapper';
 import Title from '@/components/ui/Title/Title';
@@ -13,8 +13,8 @@ const PizzaTabs = () => {
   const pizzas = usePizzaStore((state) => state.pizzas);
   const loadPizzas = usePizzaStore((state) => state.loadPizzas);
 
-  const categories = usePizzaCategory((state) => state.pizzasCategories);
-  const loadPizzasCategories = usePizzaCategory((state) => state.loadPizzasCategories);
+  const categories = useCategories((state) => state.categories);
+  const loadCategories = useCategories((state) => state.loadCategories);
 
   const handleCategorySelect = (category) => {
     setSelectedCategory(category);
@@ -22,7 +22,7 @@ const PizzaTabs = () => {
   };
 
   useEffect(() => {
-    loadPizzasCategories();
+    loadCategories();
     loadPizzas();
   }, []);
 

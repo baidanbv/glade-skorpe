@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { dishesAPI } from '@/api';
-import { usePopup, usePizzaCategory } from '@/store';
+import { usePopup, useCategories } from '@/store';
+
+import SubmitButton from '@/components/ui/Buttons/SubmitButton';
 
 const CreateDish = ({ onSuccess, token }) => {
   const [selectedCategory, setSelectedCategory] = useState('');
-  const categories = usePizzaCategory((state) => state.pizzasCategories);
-  const loadPizzasCategories = usePizzaCategory((state) => state.loadPizzasCategories);
+  const categories = useCategories((state) => state.categories);
+  const loadCategories = useCategories((state) => state.loadCategories);
   const { closePopup } = usePopup();
 
   const {
@@ -53,7 +55,7 @@ const CreateDish = ({ onSuccess, token }) => {
   };
 
   useEffect(() => {
-    loadPizzasCategories();
+    loadCategories();
   }, []);
 
   return (
@@ -118,9 +120,7 @@ const CreateDish = ({ onSuccess, token }) => {
         </div>
 
         <div className="flex items-center justify-center w-full">
-          <button className="bg-secondary py-2 px-4 rounded focus:outline-none focus:shadow-outline font-kurale" type="submit">
-            Add new dish
-          </button>
+          <SubmitButton title=" Add new dish" type="submit"/>
         </div>
       </form>
     </div>

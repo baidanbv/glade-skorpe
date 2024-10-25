@@ -9,6 +9,7 @@ import { helpersFunctions } from '@/helpers';
 import ModalPopup from '@/components/ui/ModalPopup/ModalPopup';
 import AcceptMessage from '@/components/ui/AcceptMessage/AcceptMessage';
 import ActionButton from '@/components/ui/Buttons/ActionButton';
+import AdminPageTitle from '@/components/ui/Title/AdminPageTitle';
 import Loader from '@/components/layouts/Loader/Loader';
 
 const Page = () => {
@@ -89,7 +90,7 @@ const Page = () => {
 
   return (
     <div className="relative">
-      <h1 className="capitalize font-kurale text-3xl mb-5 text-border text-secondary">Messages</h1>
+      <AdminPageTitle title="Messages"/>
       <div>
         <table className="table-auto border-collapse border w-full">
           <thead>

@@ -16,11 +16,6 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/(site)/cart/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(site)/cart/page.js"
-    ],
     "/(admin)/backoffice/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -30,6 +25,16 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(admin)/backoffice/layout.js"
+    ],
+    "/(admin)/backoffice/categories/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(admin)/backoffice/categories/page.js"
+    ],
+    "/(admin)/backoffice/orders/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(admin)/backoffice/orders/page.js"
     ],
     "/(admin)/backoffice/messages/page": [
       "static/chunks/webpack.js",
@@ -41,10 +46,50 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(admin)/backoffice/dishes/page.js"
     ],
-    "/(admin)/backoffice/orders/page": [
+    "/(admin)/backoffice/employees/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/backoffice/orders/page.js"
+      "static/chunks/app/(admin)/backoffice/employees/page.js"
+    ],
+    "/(admin)/backoffice/users/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(admin)/backoffice/users/page.js"
+    ],
+    "/(admin)/backoffice/ingredients/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(admin)/backoffice/ingredients/page.js"
+    ],
+    "/(site)/employees/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(site)/employees/page.js"
+    ],
+    "/(site)/contact/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(site)/contact/page.js"
+    ],
+    "/(site)/cart/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(site)/cart/page.js"
+    ],
+    "/(site)/dish/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(site)/dish/[id]/page.js"
+    ],
+    "/(admin)/login/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(admin)/login/page.js"
+    ],
+    "/(admin)/login/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(admin)/login/layout.js"
     ]
   }
 }

@@ -11,6 +11,7 @@ import UpdateEmployee from '@/components/ui/Forms/UpdateEmployee/UpdateEmployee'
 import AcceptMessage from '@/components/ui/AcceptMessage/AcceptMessage';
 import ActionButton from '@/components/ui/Buttons/ActionButton';
 import CreateButton from '@/components/ui/Buttons/CreateButton';
+import AdminPageTitle from '@/components/ui/Title/AdminPageTitle';
 import Loader from '@/components/layouts/Loader/Loader';
 
 const Page = () => {
@@ -49,7 +50,7 @@ const Page = () => {
   return (
     <div className="relative">
       <CreateButton title="Create New" handleClick={openPopup} />
-      <h1 className="capitalize font-kurale text-3xl mb-5 text-border text-secondary">employees</h1>
+      <AdminPageTitle title="employees"/>
       <div className="overflow-x-auto">
         <table className="table-auto border-collapse border w-3/4">
           <thead>

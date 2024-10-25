@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import { employeesAPI } from '@/api';
 import { usePopup } from '@/store';
 
+import SubmitButton from '@/components/ui/Buttons/SubmitButton';
 import Loader from '@/components/layouts/Loader/Loader';
 
 const UpdateEmployee = ({ onSuccess, employeeId, token }) => {
@@ -88,9 +89,7 @@ const UpdateEmployee = ({ onSuccess, employeeId, token }) => {
         </div>
 
         <div className="flex items-center justify-center">
-          <button className="bg-secondary py-2 px-4 rounded focus:outline-none focus:shadow-outline font-kurale" type="submit">
-            Update Employee
-          </button>
+          <SubmitButton title="Update Employee" type="submit"/>
         </div>
       </form>
     </div>

@@ -11,6 +11,7 @@ import CreateUser from '@/components/ui/Forms/CreateUser/CreateUser';
 import UpdateUser from '@/components/ui/Forms/UpdateUser/UpdateUser';
 import ActionButton from '@/components/ui/Buttons/ActionButton';
 import CreateButton from '@/components/ui/Buttons/CreateButton';
+import AdminPageTitle from '@/components/ui/Title/AdminPageTitle';
 import Loader from '@/components/layouts/Loader/Loader';
 
 const Page = () => {
@@ -49,7 +50,7 @@ const Page = () => {
   return (
     <div className="relative">
       <CreateButton title="Create New" handleClick={openPopup} />
-      <h1 className="capitalize font-kurale text-3xl mb-5 text-border text-secondary">Users</h1>
+      <AdminPageTitle title="Users"/>
       <div>
         {users.map((user) => (
           <div key={user._id} className="flex justify-between items-center border-b py-2">

@@ -102,6 +102,14 @@ const BackofficeLayout = ({ children }) => {
             {unReadOrdersAmount.length > 0 && <span className=" text-sm text-secondary bg-background p-2 rounded-full w-5 h-5 flex items-center justify-center">{unReadOrdersAmount.length}</span>}
           </Link>
 
+          <Link href="/backoffice/categories" className={`font-kurale mb-5 text-2xl block hover:text-secondary ${currentPathName === '/backoffice/categories' ? 'text-secondary text-4xl' : 'text-background'}  `}>
+            Categories
+          </Link>
+
+          <Link href="/backoffice/ingredients" className={`font-kurale mb-5 text-2xl block hover:text-secondary ${currentPathName === '/backoffice/ingredients' ? 'text-secondary text-4xl' : 'text-background'}  `}>
+            Ingredients
+          </Link>
+
           <Link href="/backoffice/users" className={`font-kurale mb-5 text-2xl block hover:text-secondary ${currentPathName === '/backoffice/users' ? 'text-secondary text-4xl' : 'text-background'}  `}>
             Users
           </Link>

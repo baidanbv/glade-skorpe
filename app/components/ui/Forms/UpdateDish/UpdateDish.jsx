@@ -4,16 +4,17 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { dishesAPI } from '@/api';
-import { usePopup, usePizzaCategory } from '@/store';
+import { usePopup, useCategories } from '@/store';
 
+import SubmitButton from '@/components/ui/Buttons/SubmitButton';
 import Loader from '@/components/layouts/Loader/Loader';
 
 const UpdateDish = ({ onSuccess, dishId, token }) => {
   const { closeUpdatePopup } = usePopup();
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState('');
-  const categories = usePizzaCategory((state) => state.pizzasCategories);
-  const loadPizzasCategories = usePizzaCategory((state) => state.loadPizzasCategories);
+  const categories = useCategories((state) => state.categories);
+  const loadCategories = useCategories((state) => state.loadCategories);
 
   const {
     register,
@@ -76,7 +77,7 @@ const UpdateDish = ({ onSuccess, dishId, token }) => {
   }, [dishId, reset]);
 
   useEffect(() => {
-    loadPizzasCategories();
+    loadCategories();
   }, []);
 
   if (loading) {
@@ -145,9 +146,7 @@ const UpdateDish = ({ onSuccess, dishId, token }) => {
         </div>
 
         <div className="flex items-center justify-center w-full">
-          <button className="bg-secondary py-2 px-4 rounded focus:outline-none focus:shadow-outline font-kurale" type="submit">
-            Update
-          </button>
+         <SubmitButton title="Update" type="submit"/>
         </div>
       </form>
     </div>

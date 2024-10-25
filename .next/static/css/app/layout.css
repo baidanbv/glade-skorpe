@@ -1272,6 +1272,10 @@ h6 {
   background-color: transparent;
 }
 
+.hover\:bg-background:hover{
+  background-color: var(--background);
+}
+
 .hover\:text-accent:hover{
   color: var(--accent);
 }
