@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Instruktion til opsætning og kørsel af "Den Glade Skorpe"-applikationen
 
-## Getting Started
+## Trin til installation og kørsel af applikationen
 
-First, run the development server:
+Følg nedenstående trin for at installere og køre applikationen lokalt på din enhed.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### 1. Installation af afhængigheder
+
+Før du kan køre applikationen, skal du installere alle nødvendige afhængigheder.
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Opsætning af variabler
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+For at applikationen kan fungere korrekt, skal du oprette en fil `.env.local` i roden af projektet og tilføje variablerne.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Eksempel på indhold af `.env.local`:
 
-## Learn More
+```
+NEXT_PUBLIC_SERVER_PATH=http://localhost:3042
+NEXT_PUBLIC_MAX_SELECTED_EXTRA=5
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Start projektet
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+`npm run dev`
